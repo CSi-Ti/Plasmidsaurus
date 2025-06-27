@@ -52,7 +52,7 @@ def run(fastq_folder, aa_ref_path):
     fastq_files = sorted(list(Path(fastq_folder).glob('*.fastq')))
     header = ['File_name', 'Total_reads', 'Kozak_reads', 'Type', 'Type_reads', 'Lib_seq', 'Cons_seq', 'Match', 'N_match', 'Percentage']
     rows = []
-    for fastq_file in fastq_files[:10]:
+    for fastq_file in fastq_files:
         # if 'SMTC75_14_sample_14' not in fastq_file.stem:
         #     continue
         index = int(fastq_file.stem.split('_')[-1]) - 1
